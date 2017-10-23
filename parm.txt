@@ -4,20 +4,19 @@ NFS_HOST_IP="9.98.12.81"
 
 PORTAINER_PORT="9000" # exposed port for Portainer
 LDAP_PORT="8084" # exposed port for LDAP UI
-GOGS_PORT="10080" #exposed port for GOGS
-REDMINEUI_PORT="10083" #exposed port for REDMINE
+REDMINE_PORT="10083" #exposed port for REDMINE
 JENKINS_UI_PORT="10081" # exposed port for Jenkins UI
 JENKINS_SLAVE_PORT="50001" # exposed port for Jenkins slave connection
 NEXUS_ARTIFACT_PORT="8081" # exposed port for Nexus artifacts (jar, war, etc) upload
 NEXUS_IMAGE_PORT="5000" # exposed port for Nexus docker image upload
 GITLAB_PORT="11080" #exposed port for Gitlab
-WORDPRESS_PORT="8080" #exposed port for Wordpress
 BOOKSTACK_PORT="10088" #exposed port for bookstack
 CADVISOR_PORT="8082" #exposed port for cAdvisor
 SONARQUBE_PORT="19000" #exposed port for Sonarqube
 HYGIEIAUI_PORT="8888" #exposed port for Hygieia UI
-KIBANA_PORT="5601" #exposed port for Kibana
 GRAFANA_PORT="3000" #exposed port for Grafana
+
+KIBANA_PORT="5601" #exposed port for Kibana
 
 
 #internal variables - do not change
@@ -30,8 +29,8 @@ HOST_INTERNAL_SUBNET="11.7.0.0/16"
 PORTAINER_IMAGE="justinwzy/devops_portainer:latest"
 LDAP_IMAGE="justinwzy/devops_ldap:latest"
 LDAPUI_IMAGE="justinwzy/devops_ldapui:latest"
-REDMINEDB_IMAGE="sameersbn/mysql:latest"
-REDMINE_IMAGE="sameersbn/redmine:latest"
+REDMINEDB_IMAGE="justinwzy/devops_redminedb:latest"
+REDMINE_IMAGE="justinwzy/devops_redmine:latest"
 NEXUS_IMAGE="justinwzy/devops_nexus:latest"
 JENKINS_IMAGE="justinwzy/devops_jenkins:latest"
 MAVEN_IMAGE="justinwzy/devops_maven:latest"
@@ -48,7 +47,7 @@ HYGIEIACLCTR_JENKINS_BUILD_IMAGE="justinwzy/devops_hygieia_jenkins_build_collect
 HYGIEIACLCTR_SONAR_CODE_IMAGE="justinwzy/devops_hygieia_sonar_code_collector:latest"
 HYGIEIACLCTR_GITLAB_FEATURE_IMAGE="justinwzy/devops_hygieia_gitlab_feature_collector:latest"
 HYGIEIACLCTR_GITLAB_SCM_IMAGE="justinwzy/devops_hygieia_gitlab_scm_collector:latest"
-INFLUXDB_IMAGE="justinwzy/devops_influxdb:latest"
+GRAFANADB_IMAGE="justinwzy/devops_grafanadb:latest"
 GRAFANA_IMAGE="justinwzy/devops_grafana:latest"
 
 ELASTICSEARCH_IMAGE="justinwzy/devops_elasticsearch:latest"
@@ -56,7 +55,3 @@ KIBANA_IMAGE="justinwzy/devops_kibana:latest"
 
 
 
-
-REDMINE_DB_NM="redmine" # name of the redmine db admin
-REDMINE_DB_USER="admin" # id for redmine db admin
-REDMINE_DB_PWD="zaq12wsx" # password for redmine db admin
