@@ -15,6 +15,7 @@ CADVISOR_PORT="8082" #exposed port for cAdvisor
 SONARQUBE_PORT="19000" #exposed port for Sonarqube
 HYGIEIAUI_PORT="8888" #exposed port for Hygieia UI
 GRAFANA_PORT="3000" #exposed port for Grafana
+FRONTPAGE_PORT="8085" #exposed port for frontpage
 
 KIBANA_PORT="5601" #exposed port for Kibana
 
@@ -50,6 +51,7 @@ HYGIEIACLCTR_GITLAB_FEATURE_IMAGE="justinwzy/devops_hygieia_gitlab_feature_colle
 HYGIEIACLCTR_GITLAB_SCM_IMAGE="justinwzy/devops_hygieia_gitlab_scm_collector:latest"
 GRAFANADB_IMAGE="justinwzy/devops_grafanadb:latest"
 GRAFANA_IMAGE="justinwzy/devops_grafana:latest"
+FRONTPAGE_IMAGE="justinwzy/devops_frontpage:latest"
 
 
 ELASTICSEARCH_IMAGE="justinwzy/devops_elasticsearch:latest"
