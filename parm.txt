@@ -17,8 +17,8 @@ HYGIEIAUI_PORT="8888" #exposed port for Hygieia UI
 GRAFANA_PORT="3000" #exposed port for Grafana
 FRONTPAGE_PORT="8085" #exposed port for frontpage
 ROCKETCHAT_PORT="3001" #exposed port for rocket.chat
-
-KIBANA_PORT="5601" #exposed port for Kibana
+ELKKIBANA_PORT="5601" #exposed port for Kibana
+DOCKERSWARMVISUALIZER_PORT="8086" #exposed port for Docker Swarm Visualizer
 
 
 #internal variables - do not change
@@ -31,8 +31,6 @@ HOST_INTERNAL_SUBNET="11.7.0.0/16"
 PORTAINER_IMAGE="justinwzy/devops_portainer:latest"
 LDAP_IMAGE="justinwzy/devops_ldap:latest"
 LDAPUI_IMAGE="justinwzy/devops_ldapui:latest"
-REDMINEDB_IMAGE="justinwzy/devops_redminedb:latest"
-REDMINE_IMAGE="justinwzy/devops_redmine:latest"
 NEXUS_IMAGE="justinwzy/devops_nexus:latest"
 JENKINS_IMAGE="justinwzy/devops_jenkins:latest"
 MAVEN_IMAGE="justinwzy/devops_maven:latest"
@@ -55,10 +53,10 @@ GRAFANA_IMAGE="justinwzy/devops_grafana:latest"
 FRONTPAGE_IMAGE="justinwzy/devops_frontpage:latest"
 ROCKETCHATDB_IMAGE="justinwzy/devops_rocketchatdb:latest"
 ROCKETCHAT_IMAGE="justinwzy/devops_rocketchat:latest"
-
-
-ELASTICSEARCH_IMAGE="justinwzy/devops_elasticsearch:latest"
-KIBANA_IMAGE="justinwzy/devops_kibana:latest"
+ELKELASTICSEARCH_IMAGE="justinwzy/devops_elkelasticsearch:latest"
+ELKKIBANA_IMAGE="justinwzy/devops_elkkibana:latest"
+ELKLOGSTASH_IMAGE="justinwzy/devops_elklogstash:latest"
+DOCKERSWARMVISUALIZER_IMAGE="justinwzy/devops_dockerswarmvisualizer:latest"
 
 
 
