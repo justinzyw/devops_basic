@@ -20,7 +20,9 @@ ROCKETCHAT_PORT="3001" #exposed port for rocket.chat
 ELKKIBANA_PORT="5601" #exposed port for Kibana
 ELKELASTICSEARCH_PORT="9200" #exposed port for Elasticsearch
 DOCKERSWARMVISUALIZER_PORT="8086" #exposed port for Docker Swarm Visualizer
-
+DRAWIO_HTTP_PORT="18080" # exposed port for draw.io http
+DRAWIO_HTTPS_PORT="18443" # exposed port for draw.io https
+#OTRS_PORT="8087" #exposed port for OTRS
 
 #internal variables - do not change
 
@@ -60,6 +62,9 @@ ELKKIBANA_IMAGE="justinwzy/devops_elkkibana:latest"
 ELKLOGSTASH_IMAGE="justinwzy/devops_elklogstash:latest"
 ELKLOGSPOUT_IMAGE="justinwzy/devops_elklogspout:latest"
 DOCKERSWARMVISUALIZER_IMAGE="justinwzy/devops_dockerswarmvisualizer:latest"
+DRAWIO_IMAGE="justinwzy/devops_drawio:latest"
+#OTRSDB_IMAGE="justinwzy/devops_otrsdb:latest"
+#OTRS_IMAGE="justinwzy/devops_otrs:latest"
 
 
 
