@@ -23,6 +23,8 @@ DOCKERSWARMVISUALIZER_PORT="8086" #exposed port for Docker Swarm Visualizer
 DRAWIO_HTTP_PORT="18080" # exposed port for draw.io http
 DRAWIO_HTTPS_PORT="18443" # exposed port for draw.io https
 KANBOARD_PORT="8088" # exposed port for Kanboard
+NEXTCLOUD_PORT="8090" # exposed port for Nextcloud
+#ZABBIX_PORT="8089" # exposed prot for Zabbix web
 #OTRS_PORT="8087" #exposed port for OTRS
 
 #internal variables - do not change
@@ -67,6 +69,12 @@ DOCKERSWARMVISUALIZER_IMAGE="justinwzy/devops_dockerswarmvisualizer:latest"
 DRAWIO_IMAGE="justinwzy/devops_drawio:latest"
 KANBOARDDB_IMAGE="justinwzy/devops_kanboarddb:latest"
 KANBOARD_IMAGE="justinwzy/devops_kanboard:latest"
+NEXTCLOUDDB_IMAGE="justinwzy/devops_nextclouddb:latest"
+NEXTCLOUD_IMAGE="justinwzy/devops_nextcloud:latest"
+#ZABBIXDB_IMAGE="justinwzy/devops_zabbixdb:latest"
+#ZABBIX_SERVER_IMAGE="justinwzy/devops_zabbix_server:latest"
+#ZABBIX_WEB_IMAGE="justinwzy/devops_zabbix_web:latest"
+#ZABBIX_AGENT_IMAGE="justinwzy/devops_zabbix_agent:latest"
 #OTRSDB_IMAGE="justinwzy/devops_otrsdb:latest"
 #OTRS_IMAGE="justinwzy/devops_otrs:latest"
 
