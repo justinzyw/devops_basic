@@ -44,14 +44,13 @@ sudo chmod a+rw /var/run/docker.sock
 echo ---$(currentTime)---setup docker---
 
 wget https://raw.githubusercontent.com/justinzyw/devops_basic/master/daemon.json
-
 sudo cp daemon.json  /etc/docker/daemon.json
+
 #it is possble that the dockerhub is too slow in China. add Aliyun proxy: "registry-mirrors": ["https://xxxxxxxxx.mirror.aliyuncs.com"]
 
 #It is possible that after updating the daemon.json file, restart fails. Then need to create file /etc/systemd/system/docker.service.d/docker.conf by removing "-H fd://" and setting the ExecStart line to ExecStart=/usr/bin/dockerd. Refer to https://docs.docker.com/config/daemon/#troubleshoot-conflicts-between-the-daemonjson-and-startup-scripts
-
 wget https://raw.githubusercontent.com/justinzyw/devops_basic/master/docker.conf
-
+sudo mkdir /etc/systemd/system/docker.service.d
 sudo cp docker.conf  /etc/systemd/system/docker.service.d/docker.conf
 
 sudo systemctl daemon-reload
