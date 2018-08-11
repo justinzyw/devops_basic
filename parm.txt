@@ -4,7 +4,8 @@ NFS_HOST_IP="9.98.12.81"
 
 PORTAINER_PORT="9000" # exposed port for Portainer
 LDAP_PORT="8084" # exposed port for LDAP UI
-REDMINE_PORT="10083" #exposed port for REDMINE
+LDAP_PWM_PORT="9443" # exposed port for PWM https
+REDMINE_PORT="10083" # exposed port for REDMINE
 JENKINS_UI_PORT="10081" # exposed port for Jenkins UI
 JENKINS_SLAVE_PORT="50001" # exposed port for Jenkins slave connection
 NEXUS_ARTIFACT_PORT="8081" # exposed port for Nexus artifacts (jar, war, etc) upload
@@ -24,7 +25,7 @@ DRAWIO_HTTP_PORT="18080" # exposed port for draw.io http
 DRAWIO_HTTPS_PORT="18443" # exposed port for draw.io https
 KANBOARD_PORT="8088" # exposed port for Kanboard
 NEXTCLOUD_PORT="8090" # exposed port for Nextcloud
-#ZABBIX_PORT="8089" # exposed prot for Zabbix web
+#PROMETHEUS_PORT="9090" #exposed port for prometheus
 #OTRS_PORT="8087" #exposed port for OTRS
 
 #internal variables - do not change
@@ -37,6 +38,8 @@ HOST_INTERNAL_SUBNET="11.7.0.0/16"
 PORTAINER_IMAGE="justinwzy/devops_portainer:latest"
 LDAP_IMAGE="justinwzy/devops_ldap:latest"
 LDAPUI_IMAGE="justinwzy/devops_ldapui:latest"
+LDAP_PWMDB_IMAGE="justinwzy/devops_ldap_pwmdb:latest"
+LDAP_PWM_IMAGE="justinwzy/devops_ldap_pwm:latest"
 NEXUS_IMAGE="justinwzy/devops_nexus:latest"
 JENKINS_IMAGE="justinwzy/devops_jenkins:latest"
 MAVEN_IMAGE="justinwzy/devops_maven:latest"
@@ -71,10 +74,9 @@ KANBOARDDB_IMAGE="justinwzy/devops_kanboarddb:latest"
 KANBOARD_IMAGE="justinwzy/devops_kanboard:latest"
 NEXTCLOUDDB_IMAGE="justinwzy/devops_nextclouddb:latest"
 NEXTCLOUD_IMAGE="justinwzy/devops_nextcloud:latest"
-#ZABBIXDB_IMAGE="justinwzy/devops_zabbixdb:latest"
-#ZABBIX_SERVER_IMAGE="justinwzy/devops_zabbix_server:latest"
-#ZABBIX_WEB_IMAGE="justinwzy/devops_zabbix_web:latest"
-#ZABBIX_AGENT_IMAGE="justinwzy/devops_zabbix_agent:latest"
+#PROMETHEUS_IMAGE="justinwzy/devops_prometheus:latest"
+#PROMETHEUS_NODE_EXPORTER_IMAGE="justinwzy/devops_prometheus_node_exporter:latest"
+#PROMETHEUS_CONSUL_IMAGE="justinwzy/devops_prometheus_consul:latest"
 #OTRSDB_IMAGE="justinwzy/devops_otrsdb:latest"
 #OTRS_IMAGE="justinwzy/devops_otrs:latest"
 
