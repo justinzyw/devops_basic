@@ -1,6 +1,6 @@
 #variables to be updated
-LEAD_HOST_IP="9.98.12.81"
-NFS_HOST_IP="9.98.12.81"
+LEAD_HOST_IP="172.18.255.143"
+NFS_HOST_IP="236684b99b-ako42.cn-shenzhen.nas.aliyuncs.com"
 
 PORTAINER_PORT="9000" # exposed port for Portainer
 LDAP_PORT="8084" # exposed port for LDAP UI

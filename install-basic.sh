@@ -15,6 +15,8 @@ echo ---$(currentTime)---Install Docker---
 echo "vm.max_map_count=262144" | sudo tee --append /etc/sysctl.conf
 
 # install docker ce
+sudo apt update
+
 sudo apt-get -y install \
     linux-image-extra-$(uname -r) \
     linux-image-extra-virtual \
