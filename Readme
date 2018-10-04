@@ -1,0 +1,28 @@
+安装说明：
+
+1. 如果是装全套工具，至少需要3台机器，2Core8G，Ubuntu 16.04。由于用了Dockers Swarm，所以未来capacity不够可以随意横向扩展。极限是
+
+2. 安装过程需要能够连上外网，因为需要从网上下载文件和镜像。其中docker镜像的下载可能特别慢（参见install-basic.sh脚本）！！！
+
+3. 将需要的参数表(parm.txt)，脚本(*.sh)和数据包(*.tag.gz)下载到目标机上。可以用命令chmod 777 install-*将所有脚本权限调整为可执行状态
+
+4. 参数都在parm.txt里面定义，上面的部分可以定制。其中，LEAD_HOST_IP代表集群的lead节点的IP，NFS_HOST_IP代表NFS节点的IP，这两个参数必须修改
+
+5. 选定一台机器做NFS服务器，用install-nfs.sh脚本进行安装。之后所有的volume都会存在这台机器的/srv/nfs目录上。
+
+6. 在每台机器上用install-basic.sh脚本安装基本的docker和nfs客户端
+
+7. 选定一台机器做docker swarm集群的lead，用install-swarm.sh脚本安装docker swarm集群，然后根据提示（注意，添加manager节点和添加worker节点的命令是不一样的）将其他机器加入到这个集群中。
+
+8. LDAP服务是基础，必装。其他服务自选。
+
+
+注意：
+
+1. 如果从dockerhub下载image比较慢，可以利用阿里云（或者其他供应商）的proxy可能可以提高速度，设置方法：
+  a. 在阿里云上找到proxy的地址，如https://xxxxxxx.mirror.aliyuncs.com
+  b. 是在/etc/docker/daemon.json文件中添加代码"registry-mirrors": ["https://xxxxxxx.mirror.aliyuncs.com"]
+  
+2. Docker的volume plugin local-persist需要从Github上下载安装包，通常比较慢，要耐心，可以通过关注文件/usr/bin/docker-volume-local-persist的大小（下载完成应该是8.5MB左右）看出下载进度。
+
+3. 执行sh文件，可能需要使用对其赋权，例如可以一次性对所有的安装sh文件赋权：chmod 777 install-*
